@@ -43,7 +43,7 @@ const Experience = () => {
                      <span className='text-xs text-muted-foreground italic'>{experience.duration}</span>
                      <h3 className='font-semibold'>{experience.role}</h3>
                      <p className='text-sm font-medium'>{experience.location}</p>
-                     <p className='text-sm pt-2'>{experience.description}</p>
+                     <p className='text-sm pt-2 text-muted-foreground'>{experience.description}</p>
                   </div>
                </div>
             ))}

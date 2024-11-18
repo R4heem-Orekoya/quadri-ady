@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Montserrat } from "next/font/google"
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,11 +15,17 @@ const playfair = Montserrat({
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={`${playfair.variable} font-playfair antialiased`}>
-        <div className="max-md:px-6 w-full max-w-3xl mx-auto">
-          {children} 
-        </div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+        >
+          <div className="max-md:px-6 w-full max-w-3xl mx-auto">
+            {children} 
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
