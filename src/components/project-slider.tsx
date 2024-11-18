@@ -1,7 +1,7 @@
 "use client"
 
 import { Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperInstance } from "swiper";
 import 'swiper/css';
 import { Button } from './ui/button';

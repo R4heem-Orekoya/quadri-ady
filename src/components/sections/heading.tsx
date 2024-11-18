@@ -2,7 +2,6 @@ import Image from "next/image"
 import ThemeSwitcher from "../theme-switcher"
 import { Badge } from "../ui/badge"
 import Link from "next/link"
-import { cn } from "@/lib/utils"
 
 const images = [
    "https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
