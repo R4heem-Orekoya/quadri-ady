@@ -29,7 +29,7 @@ const experiences = [
 
 const Experience = () => {
    return (
-      <section >
+      <section id='experience'>
          <SectionHeading>Experiences</SectionHeading>
 
          <div className='grid mt-6'>
@@ -40,10 +40,10 @@ const Experience = () => {
                   </div>
 
                   <div className='space-y-1'>
-                     <span className='text-xs text-muted-foreground italic'>{experience.duration}</span>
-                     <h3 className='font-semibold'>{experience.role}</h3>
+                     <span className='text-sm text-muted-foreground italic'>{experience.duration}</span>
+                     <h3 className='text-lg font-semibold'>{experience.role}</h3>
                      <p className='text-sm font-medium'>{experience.location}</p>
-                     <p className='text-sm pt-2 text-muted-foreground'>{experience.description}</p>
+                     <p className='pt-2 text-muted-foreground'>{experience.description}</p>
                   </div>
                </div>
             ))}

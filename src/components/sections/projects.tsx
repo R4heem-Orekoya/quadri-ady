@@ -2,7 +2,7 @@ import ProjectSlider from "../project-slider"
 
 const Projects = () => {
    return (
-      <section className="overflow-hidden">
+      <section id='projects' className="overflow-hidden">
          <ProjectSlider />
       </section>
    )

@@ -96,8 +96,8 @@ const ProjectSlider = () => {
                            {artworkTypeIcons[selectedWork.tag as ArtworkType]}
                            {selectedWork.tag}
                         </div>
-                        <h3 className='font-medium text-sm'>{selectedWork.title}</h3>
-                        <p className='text-xs opacity-80'>{selectedWork.excerpt}</p>
+                        <h3 className='font-semibold'>{selectedWork.title}</h3>
+                        <p className='opacity-80'>{selectedWork.excerpt}</p>
                      </div>
                   </div>
                </SwiperSlide>
