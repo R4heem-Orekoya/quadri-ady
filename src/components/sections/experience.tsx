@@ -6,21 +6,21 @@ const experiences = [
    {
       logo: Disney,
       duration: "2021 - Today",      
-      role: "Senior Developer and VP of Product at Disney",
+      role: "Animator at Disney",
       location: "London, UK",
       description: "Setting vision, leadership, processes while directly participating in communications with clients such as eBay, Amazon, X, Twitch, Instagram, and many others"
    },
    {
       logo: Pinterest,
       duration: "2019 - 2021",
-      role: "Fullstack Developer at Pinterest.",
+      role: "Digital Artist at Pinterest.",
       location: "New York, NYC",
       description: "Setting vision, leadership, processes while directly participating in communications with clients such as eBay, Amazon, X, Twitch, Instagram, and many others"
    },
    {
       logo: Fly,
       duration: "2017 - 2019",
-      role: "System Engineer and Web Developer at Vercel.",
+      role: "Illustration artist at Fly.io.",
       location: "London, UK",
       description: "Setting vision, leadership, processes while directly participating in communications with clients such as eBay, Amazon, X, Twitch, Instagram, and many others"
    },

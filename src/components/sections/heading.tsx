@@ -30,7 +30,7 @@ const Heading = () => {
                      <img
                         alt="Nigerian Flag"
                         className="inline-block size-4 object-contain"
-                        src="http://purecatamphetamine.github.io/country-flag-icons/3x2/NG.svg"
+                        src="./NG.svg"
                      />
                   </span>
                   .
