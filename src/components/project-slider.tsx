@@ -8,8 +8,6 @@ import { Button } from './ui/button';
 import { Brush, ChevronLeft, ChevronRight, Code, Palette } from 'lucide-react';
 import SectionHeading from './section-heading';
 import { useRef } from 'react';
-import Image from 'next/image';
-import { Badge } from './ui/badge';
 
 const selectedWorks = [
    {
