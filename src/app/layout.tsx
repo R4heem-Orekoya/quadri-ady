@@ -4,6 +4,7 @@ import { Montserrat } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider";
 import { FloatingDock } from "@/components/floating-dock";
 import { items } from "@/lib/constants";
+import Footer from "@/components/sections/footer";
 
 export const metadata: Metadata = {
   title: "Quadri Ady: Digital and Traditional Artist",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             {children} 
           </div>
           <FloatingDock items={items} desktopClassName=""/>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

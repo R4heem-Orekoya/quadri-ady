@@ -1,5 +1,6 @@
 import Experience from "@/components/sections/experience";
 import Heading from "@/components/sections/heading";
+import Newsletter from "@/components/sections/newsletter";
 import Projects from "@/components/sections/projects";
 import Tools from "@/components/sections/tools";
 
@@ -12,6 +13,7 @@ export default function Home() {
         <Experience />
         <Projects />
         <Tools />
+        <Newsletter />
       </div>      
     </main>
   )
