@@ -22,11 +22,10 @@ const Heading = () => {
                src={`https://api.dicebear.com/9.x/adventurer/svg?seed=adeniy`}
                alt="open-peeps icon"
             />
-            <div>
+            <div className="space-y-3">
                <h1 className="text-2xl font-semibold">Quadri Ady</h1> 
-               <p className="text-sm font-medium text-muted-foreground pt-1">
-                  Digital and Traditional artist from Nigeria 
-                  {" "}
+               <p className="max-w-md font-medium text-muted-foreground pt-1">
+                  A skilled digital and traditional artist from Nigeria {" "}
                   <span>
                      <img
                         alt="Nigerian Flag"
@@ -34,7 +33,8 @@ const Heading = () => {
                         src="./NG.svg"
                      />
                   </span>
-                  .
+                  , 
+                  creating inspiring art that connects and tells stories.
                </p>
             </div>
             
