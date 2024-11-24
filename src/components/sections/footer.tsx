@@ -1,7 +1,6 @@
 import { socials } from "@/lib/constants"
 import Link from "next/link"
 import { buttonVariants } from "../ui/button"
-import { img } from "motion/react-client"
 
 const Footer = () => {
    return (

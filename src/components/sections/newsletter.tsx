@@ -7,7 +7,7 @@ const Newsletter = () => {
       <section>
          <Card className="max-w-[550px] mx-auto">
             <CardHeader>
-               <CardTitle>Let's Connect</CardTitle>
+               <CardTitle>Let&apos;s Connect</CardTitle>
             </CardHeader>
             <CardContent>
                <form className="flex max-sm:flex-col sm:items-center gap-4">

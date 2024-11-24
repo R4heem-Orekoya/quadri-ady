@@ -20,6 +20,7 @@ const Heading = () => {
             <img
                className="size-14 rounded-full bg-purple-300" 
                src={`https://api.dicebear.com/9.x/adventurer/svg?seed=adeniy`}
+               alt="open-peeps icon"
             />
             <div>
                <h1 className="text-2xl font-semibold">Quadri Ady</h1> 
