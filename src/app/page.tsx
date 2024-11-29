@@ -1,8 +1,10 @@
+import { FloatingDock } from "@/components/floating-dock";
 import Experience from "@/components/sections/experience";
 import Heading from "@/components/sections/heading";
 import Newsletter from "@/components/sections/newsletter";
 import Projects from "@/components/sections/projects";
 import Tools from "@/components/sections/tools";
+import { items } from "@/lib/constants";
 
 export default function Home() {
   return (
@@ -14,7 +16,10 @@ export default function Home() {
         <Projects />
         <Tools />
         <Newsletter />
-      </div>      
+        
+        <p className="text-center text-3xl font-dancingscript font-semibold">Quadri Aden</p>
+      </div>   
+      <FloatingDock items={items}/>   
     </main>
   )
 }
