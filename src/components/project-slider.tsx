@@ -8,6 +8,7 @@ import { Button } from './ui/button';
 import { Brush, ChevronLeft, ChevronRight, Code, Palette } from 'lucide-react';
 import SectionHeading from './section-heading';
 import { useRef } from 'react';
+import Link from 'next/link';
 
 const selectedWorks = [
    {
@@ -85,21 +86,23 @@ const ProjectSlider = () => {
          >
             {selectedWorks.map((selectedWork) => (
                <SwiperSlide key={selectedWork.title} className='relative aspect-[4/3] bg-primary-foreground rounded-lg overflow-hidden group'>
-                  <img 
-                     className='w-full h-full object-cover group-hover:scale-105 transition duration-300'
-                     src={selectedWork.image} 
-                     alt={selectedWork.image} 
-                  />
-                  <div className='absolute inset-0 bg-black/60 backdrop-blur-[2px] p-4 flex opacity-0 group-hover:opacity-100 transition'>
-                     <div className='grid gap-2 mt-auto text-white translate-y-4 group-hover:translate-y-0 duration-300'>
-                        <div className='px-2 py-1 flex items-center gap-1 rounded-3xl bg-white text-zinc-950 backdrop-blur-sm w-fit text-xs font-semibold'>
-                           {artworkTypeIcons[selectedWork.tag as ArtworkType]}
-                           {selectedWork.tag}
+                  <Link href="/project/hello">
+                     <img 
+                        className='w-full h-full object-cover group-hover:scale-105 transition duration-300'
+                        src={selectedWork.image} 
+                        alt={selectedWork.image} 
+                     />
+                     <div className='absolute inset-0 bg-black/60 backdrop-blur-[2px] p-4 flex opacity-0 group-hover:opacity-100 transition'>
+                        <div className='grid gap-2 mt-auto text-white translate-y-4 group-hover:translate-y-0 duration-300'>
+                           <div className='px-2 py-1 flex items-center gap-1 rounded-3xl bg-white text-zinc-950 backdrop-blur-sm w-fit text-xs font-semibold'>
+                              {artworkTypeIcons[selectedWork.tag as ArtworkType]}
+                              {selectedWork.tag}
+                           </div>
+                           <h3 className='font-semibold'>{selectedWork.title}</h3>
+                           <p className='opacity-80'>{selectedWork.excerpt}</p>
                         </div>
-                        <h3 className='font-semibold'>{selectedWork.title}</h3>
-                        <p className='opacity-80'>{selectedWork.excerpt}</p>
                      </div>
-                  </div>
+                  </Link>
                </SwiperSlide>
             ))}
          </Swiper>

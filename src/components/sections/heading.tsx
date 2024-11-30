@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Badge } from "../ui/badge"
 import Link from "next/link"
 import ThemeSwitcher from "../theme-switcher"
+import { Mail } from "lucide-react"
 
 const images = [
    "https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -37,8 +38,11 @@ const Heading = () => {
                </p>
             </div>
 
-            <Link href="#">
-               <Badge className="py-2 px-4 rounded-3xl">Available for work</Badge>
+            <Link href="mailto:adeniyiady@gmail.com">
+               <Badge className="py-2 px-4 rounded-3xl">
+                  <Mail className="w-4 h-4 mr-2" strokeWidth={1.5}/>
+                  adeniyiady@gmail.com
+               </Badge>
             </Link>
          </div>
 
