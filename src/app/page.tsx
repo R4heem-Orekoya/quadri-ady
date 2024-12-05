@@ -6,6 +6,8 @@ import Projects from "@/components/sections/projects";
 import Tools from "@/components/sections/tools";
 import { items } from "@/lib/constants";
 
+export const revalidate = 60;
+
 export default function Home() {
   return (
     <main className="py-20 grid gap-16">
