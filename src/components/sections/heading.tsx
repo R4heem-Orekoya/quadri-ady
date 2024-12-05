@@ -23,7 +23,7 @@ const Heading = () => {
                alt="open-peeps icon"
             />
             <div className="space-y-3">
-               <h1 className="text-2xl font-semibold">Quadri Ady</h1>
+               <h1 className="text-2xl font-semibold">Quadri Aden</h1>
                <p className="max-w-md font-medium text-muted-foreground pt-1">
                   A skilled digital and traditional artist from Nigeria {" "}
                   <span>
@@ -52,12 +52,12 @@ const Heading = () => {
                   key={i}
                   className="relative w-48 aspect-[16/11] flex-1 max-sm:hidden shadow-md"
                >
-                  <Image src={image} fill alt={image + i} objectFit="cover" className="rounded-lg" />
+                  <Image src={image} fill alt={image + i} className="rounded-lg object-cover" />
                </div>
             ))}
 
             <div className="relative overflow-hidden w-48 aspect-video flex-1 sm:hidden rounded-lg shadow-md bg-zinc-100">
-               <Image src={images[1]} alt="image 2" fill objectFit="cover" />
+               <Image src={images[1]} alt="image 2" fill className="object-cover" />
             </div>
          </div>
       </section>

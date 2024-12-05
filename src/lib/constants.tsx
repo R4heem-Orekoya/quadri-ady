@@ -11,21 +11,21 @@ export const socials = [
   {
     title: "Behance",
     icon: "./behance-icon.png",
-    url: "./behance-icon.png"
+    url: "https://www.behance.net/adeniyiady94dc"
   },
   {
     title: "Instagram",
     icon: <Instagram className="w-8 h-8"/>,
-    url: "https://instagram.com"
+    url: "https://instagram.com/quadriaden"
   },
   {
     title: "X",
     icon: <XformerlyTwitter className="w-8 h-8"/>,
-    url: "https://x.com"
+    url: "https://x.com/QuadriAden"
   },
   {
     title: "Threads",
     icon: <Threads className="w-8 h-8"/>,
-    url: "https://threads.com"
+    url: "https://www.threads.net/@quadriaden"
   },
 ]
