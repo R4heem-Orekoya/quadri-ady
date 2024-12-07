@@ -1,9 +1,12 @@
+import { allProjectQuery } from "@/lib/sanity/queries";
 import ProjectSlider from "../project-slider"
-
-const Projects = () => {
+import { sanityFetch } from "@/lib/sanity/live";
+const Projects = async () => {
+   const { data: projects } = await sanityFetch({ query: allProjectQuery });
+   
    return (
       <section id='projects' className="overflow-hidden">
-         <ProjectSlider />
+         <ProjectSlider selectedWorks={projects} />
       </section>
    )
 }

@@ -9,39 +9,41 @@ import { Brush, ChevronLeft, ChevronRight, Code, Palette } from 'lucide-react';
 import SectionHeading from './section-heading';
 import { useRef } from 'react';
 import Link from 'next/link';
+import { Project as projectType } from "../../sanity.types"
+import { urlForImage } from '@/lib/sanity/utils';
 
-const selectedWorks = [
-   {
-      title: "NFT Collection, Abstract Character Design, Crypto Art",
-      excerpt: "A series of unique, collectible monkey art pieces.",
-      tag: "nft",
-      image: "./nft-2.jpg",
-   },
-   {
-      title: "2D Simple Game Character Design",
-      excerpt: "A series of unique, collectible monkey art pieces.",
-      tag: "digital",
-      image: "./2d-1.jpg",
-   },
-   {
-      title: "Bond Bears - NFT Collection",
-      excerpt: "A series of unique, collectible monkey art pieces.",
-      tag: "nft",
-      image: "./nft-1.png",
-   },
-   {
-      title: "2d Character Design",
-      excerpt: "A series of unique, collectible monkey art pieces.",
-      tag: "digital",
-      image: "./art-1.jpg",
-   },
-   {
-      title: "2D Game Design Concept",
-      excerpt: "A series of unique, collectible monkey art pieces.",
-      tag: "digital",
-      image: "./2d-2.jpg",
-   },
-]
+// const selectedWorks = [
+//    {
+//       title: "NFT Collection, Abstract Character Design, Crypto Art",
+//       excerpt: "A series of unique, collectible monkey art pieces.",
+//       tag: "nft",
+//       image: "./nft-2.jpg",
+//    },
+//    {
+//       title: "2D Simple Game Character Design",
+//       excerpt: "A series of unique, collectible monkey art pieces.",
+//       tag: "digital",
+//       image: "./2d-1.jpg",
+//    },
+//    {
+//       title: "Bond Bears - NFT Collection",
+//       excerpt: "A series of unique, collectible monkey art pieces.",
+//       tag: "nft",
+//       image: "./nft-1.png",
+//    },
+//    {
+//       title: "2d Character Design",
+//       excerpt: "A series of unique, collectible monkey art pieces.",
+//       tag: "digital",
+//       image: "./art-1.jpg",
+//    },
+//    {
+//       title: "2D Game Design Concept",
+//       excerpt: "A series of unique, collectible monkey art pieces.",
+//       tag: "digital",
+//       image: "./2d-2.jpg",
+//    },
+// ]
 
 type ArtworkType = 'digital' | 'nft' | 'traditional'
 
@@ -49,9 +51,9 @@ const artworkTypeIcons: Record<ArtworkType, React.ReactNode> = {
    digital: <Palette className="h-4 w-4" />,
    nft: <Code className="h-4 w-4" />,
    traditional: <Brush className="h-4 w-4" />
- }
+}
 
-const ProjectSlider = () => { 
+const ProjectSlider = ({ selectedWorks }: { selectedWorks: projectType[] }) => { 
    const swiperRef = useRef<SwiperInstance | null>(null)
      
    return (
@@ -86,11 +88,11 @@ const ProjectSlider = () => {
          >
             {selectedWorks.map((selectedWork) => (
                <SwiperSlide key={selectedWork.title} className='relative aspect-[4/3] bg-primary-foreground rounded-lg overflow-hidden group'>
-                  <Link href="/project/hello">
+                  <Link href={`/project/${selectedWork.slug?.current}`}>
                      <img 
                         className='w-full h-full object-cover group-hover:scale-105 transition duration-300'
-                        src={selectedWork.image} 
-                        alt={selectedWork.image} 
+                        src={urlForImage(selectedWork.thumbnail)?.auto("format").url() as string} 
+                        alt={selectedWork.title + "thumbnail"} 
                      />
                      <div className='absolute inset-0 bg-black/60 backdrop-blur-[2px] p-4 flex opacity-0 group-hover:opacity-100 transition'>
                         <div className='grid gap-2 mt-auto text-white translate-y-4 group-hover:translate-y-0 duration-300'>
