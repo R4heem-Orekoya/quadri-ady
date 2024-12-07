@@ -17,13 +17,15 @@ interface Props {
    params: Promise<{ slug: string }>
 }
 
+export const revalidate = 60
+
 export async function generateStaticParams() {
    const { data } = await sanityFetch({
       query: individualProjectSlug,
       perspective: "published",
       stega: false
    });
-
+   
    return data;
 }
 
