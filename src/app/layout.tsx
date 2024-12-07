@@ -5,8 +5,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Footer from "@/components/sections/footer";
 
 export const metadata: Metadata = {
-  title: "Quadri Ady: Digital and Traditional Artist",
-  description: "Quadri Ady is a talented digital and traditional artist from Nigeria.",
+  title: "Quadri Aden: Digital and Traditional Artist from Nigeria",
+  description: "Quadri Aden is a versatile and talented artist based in Nigeria, excelling in both digital and traditional art forms. With expertise in tools like Procreate, Adobe Illustrator, Photoshop, and Krita, Quadri creates captivating artworks that bridge the gap between classical techniques and modern technology. Explore his portfolio to discover stunning illustrations, paintings, and designs crafted with precision and creativity.",
 };
 
 const montserrat = Montserrat({
