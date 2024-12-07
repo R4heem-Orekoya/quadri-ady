@@ -62,7 +62,7 @@ const Page = async ({ params }: Props) => {
          <section>
             <SectionHeading>Project Insights</SectionHeading>
 
-            <div className="space-y-4 mt-4 prose prose-p:text-muted-foreground">
+            <div className="space-y-4 mt-4 prose prose-headings:text-primary prose-p:text-muted-foreground prose-blockquote:text-muted-foreground prose-blockquote:border-orange-600 prose-a:text-orange-600">
                <PortableText value={project.projectInsight as PortableTextBlock[]}/>
             </div>
          </section>
