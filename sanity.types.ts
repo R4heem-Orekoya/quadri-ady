@@ -143,6 +143,8 @@ export type Project = {
   }>;
 };
 
+export type DesignProcesses = NonNullable<Project["designProcess"]>
+
 export type Slug = {
   _type: "slug";
   current?: string;
@@ -232,3 +234,15 @@ export type SanityImageMetadata = {
 
 export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Project | Slug | Experience | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata;
 export declare const internalGroqTypeReferenceTo: unique symbol;
+
+
+export type individualProjectSlugType = Array<{
+  slug: string;
+}>;
+
+import "@sanity/client";
+declare module "@sanity/client" {
+  interface SanityQueries {     
+    "\n  *[_type == \"project\" && defined(slug.current)]\n  { \"slug\": slug.current }\n": individualProjectSlugType;
+  }
+}

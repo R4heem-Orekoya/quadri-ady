@@ -50,13 +50,13 @@ const Heading = () => {
             {images.map((image, i) => (
                <div
                   key={i}
-                  className="relative w-48 aspect-[16/11] flex-1 max-sm:hidden shadow-md"
+                  className="relative w-48 aspect-[16/11] bg-primary-foreground flex-1 max-sm:hidden shadow-md"
                >
                   <Image src={image} fill alt={image + i} className="rounded-lg object-cover" />
                </div>
             ))}
 
-            <div className="relative overflow-hidden w-48 aspect-video flex-1 sm:hidden rounded-lg shadow-md bg-zinc-100">
+            <div className="relative overflow-hidden w-48 aspect-video flex-1 sm:hidden rounded-lg shadow-md bg-primary-foreground">
                <Image src={images[1]} alt="image 2" fill className="object-cover" />
             </div>
          </div>

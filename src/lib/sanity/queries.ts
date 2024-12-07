@@ -25,3 +25,20 @@ export const allExperienceQuery = defineQuery(`
 export const allProjectQuery = defineQuery(`
   *[_type == "project"] { ${projectField}} 
 `)
+
+export const projectQuery = defineQuery(`
+  *[_type == "project" && slug.current == $slug] [0] 
+  {
+    _id,
+    title,
+    thumbnail,
+    description,
+    designProcess,
+    projectInsight,
+  }
+`);
+
+export const individualProjectSlug = defineQuery(`
+  *[_type == "project" && defined(slug.current)]
+  { "slug": slug.current }
+`);
