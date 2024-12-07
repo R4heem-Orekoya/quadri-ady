@@ -18,7 +18,7 @@ const Heading = () => {
          </div>
          <div className="flex flex-col items-center py-6 text-center gap-4">
             <img
-               className="size-14 rounded-full bg-purple-300"
+               className="size-14 rounded-full bg-purple-400"
                src={`https://api.dicebear.com/9.x/adventurer/svg?seed=adeniy`}
                alt="open-peeps icon"
             />

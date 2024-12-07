@@ -79,14 +79,14 @@ const Page = async ({ params }: Props) => {
             <DesignProcess processes={project.designProcess as DesignProcesses} />
 
             <div className="relative w-full aspect-[16/10] rounded-lg overflow-hidden my-6">
-               <Image src={urlForImage(project.thumbnail)?.auto("format").url() as string} alt={project.title + "showcase image"} fill className="object-cover" />
+               <Image src={urlForImage(project.thumbnail)?.auto("format").url() as string} alt="This is the finished product of quadri aden's artwork." fill className="object-cover" />
             </div>
          </section>
 
          <section>
             <SectionHeading>Project Insights</SectionHeading>
 
-            <div className="space-y-4 mt-4 prose prose-headings:text-primary prose-p:text-muted-foreground prose-blockquote:text-muted-foreground prose-blockquote:border-orange-500 prose-a:text-orange-500">
+            <div className="space-y-4 mt-4 prose prose-headings:text-primary prose-p:text-muted-foreground prose-blockquote:text-muted-foreground prose-blockquote:border-purple-500 prose-a:text-purple-500">
                <PortableText value={project.projectInsight as PortableTextBlock[]} />
             </div>
          </section>
