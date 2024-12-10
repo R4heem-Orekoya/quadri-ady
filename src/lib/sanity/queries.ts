@@ -15,7 +15,8 @@ const projectField = `
   slug,
   thumbnail,
   excerpt,
-  tag
+  tag,
+  _updatedAt
 `
 
 export const allExperienceQuery = defineQuery(`
@@ -23,7 +24,7 @@ export const allExperienceQuery = defineQuery(`
 `)
 
 export const allProjectQuery = defineQuery(`
-  *[_type == "project"] { ${projectField}} 
+  *[_type == "project"] { ${projectField} } 
 `)
 
 export const projectQuery = defineQuery(`

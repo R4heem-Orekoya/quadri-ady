@@ -12,39 +12,6 @@ import Link from 'next/link';
 import { Project as projectType } from "../../sanity.types"
 import { urlForImage } from '@/lib/sanity/utils';
 
-// const selectedWorks = [
-//    {
-//       title: "NFT Collection, Abstract Character Design, Crypto Art",
-//       excerpt: "A series of unique, collectible monkey art pieces.",
-//       tag: "nft",
-//       image: "./nft-2.jpg",
-//    },
-//    {
-//       title: "2D Simple Game Character Design",
-//       excerpt: "A series of unique, collectible monkey art pieces.",
-//       tag: "digital",
-//       image: "./2d-1.jpg",
-//    },
-//    {
-//       title: "Bond Bears - NFT Collection",
-//       excerpt: "A series of unique, collectible monkey art pieces.",
-//       tag: "nft",
-//       image: "./nft-1.png",
-//    },
-//    {
-//       title: "2d Character Design",
-//       excerpt: "A series of unique, collectible monkey art pieces.",
-//       tag: "digital",
-//       image: "./art-1.jpg",
-//    },
-//    {
-//       title: "2D Game Design Concept",
-//       excerpt: "A series of unique, collectible monkey art pieces.",
-//       tag: "digital",
-//       image: "./2d-2.jpg",
-//    },
-// ]
-
 type ArtworkType = 'digital' | 'nft' | 'traditional'
 
 const artworkTypeIcons: Record<ArtworkType, React.ReactNode> = {
