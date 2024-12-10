@@ -11,6 +11,7 @@ import { useRef } from 'react';
 import Link from 'next/link';
 import { Project as projectType } from "../../sanity.types"
 import { urlForImage } from '@/lib/sanity/utils';
+import Image from 'next/image';
 
 type ArtworkType = 'digital' | 'nft' | 'traditional'
 
@@ -56,8 +57,9 @@ const ProjectSlider = ({ selectedWorks }: { selectedWorks: projectType[] }) => {
             {selectedWorks.map((selectedWork) => (
                <SwiperSlide key={selectedWork.title} className='relative aspect-[4/3] bg-primary-foreground rounded-lg overflow-hidden group'>
                   <Link href={`/project/${selectedWork.slug?.current}`}>
-                     <img 
+                     <Image 
                         className='w-full h-full object-cover group-hover:scale-105 transition duration-300'
+                        fill
                         src={urlForImage(selectedWork.thumbnail)?.auto("format").url() as string} 
                         alt={selectedWork.title + "thumbnail"} 
                      />

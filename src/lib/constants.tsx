@@ -1,5 +1,6 @@
 import { Instagram, Threads, XformerlyTwitter } from "@/components/icons";
 import { BriefcaseBusiness, GraduationCap, ShoppingBasket } from "lucide-react";
+import behanceLogo from "../../public/behance-icon.png"
 
 export const items = [
   { title: "Experience", icon: <GraduationCap className="w-5 h-5" strokeWidth={1.4} />, href: "#experience" },
@@ -10,7 +11,7 @@ export const items = [
 export const socials = [
   {
     title: "Behance",
-    icon: "./behance-icon.png",
+    icon: behanceLogo,
     url: process.env.NEXT_PUBLIC_BEHANCE_PROFILE_URL
   },
   {
@@ -19,7 +20,7 @@ export const socials = [
     url: process.env.NEXT_PUBLIC_INSTAGRAM_PROFILE_URL
   },
   {
-    title: "X",
+    title: "X (formerly twitter)",
     icon: <XformerlyTwitter className="w-8 h-8"/>,
     url: process.env.NEXT_PUBLIC_X_PROFILE_URL
   },
