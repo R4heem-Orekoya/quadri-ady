@@ -11,7 +11,7 @@ const Footer = () => {
             <ul className="flex items-center gap-4">
                {socials.map((social, i) => (
                   <li key={social.title}>
-                     <Link target="__blank" href={social.url} className={buttonVariants({ variant: "ghost", size: "icon" })}>
+                     <Link target="__blank" href={social.url as string} className={buttonVariants({ variant: "ghost", size: "icon" })}>
                         {i === 0 ? (
                            <img src={social.icon as string} className="size-8 rounded-sm object-cover" alt="behance logo"/>
                         ): (
