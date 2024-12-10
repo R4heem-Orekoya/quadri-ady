@@ -23,7 +23,7 @@ const DesignProcess = ({ processes }: { processes: DesignProcesses }) => {
          {selected && (
             <div onClick={() => setSelected(null)} className="fixed inset-0 px-4 z-[999999999] bg-black/50 backdrop-blur-sm grid place-items-center">
                <ScrollArea onClick={(e) => { e.stopPropagation() }} className="h-[550px] rounded-xl overflow-hidden">
-                  <div className="w-full max-w-[750px] p-4 rounded-xl border bg-primary-foreground">   
+                  <div className="w-full max-w-[750px] p-4 rounded-lg border bg-primary-foreground">   
                      <div className="relative w-full rounded-lg overflow-hidden aspect-video">
                         <Image src={urlForImage(selected.processImage)?.auto("format").url() as string} fill className="w-full h-full object-cover group-hover:scale-110 transition duration-300" alt="image"/>
                      </div>

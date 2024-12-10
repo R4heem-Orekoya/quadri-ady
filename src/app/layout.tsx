@@ -7,11 +7,30 @@ import Footer from "@/components/sections/footer";
 export const metadata: Metadata = {
   title: "Quadri Aden: Digital and Traditional Artist from Nigeria",
   description: "Quadri Aden is a versatile and talented artist based in Nigeria, excelling in both digital and traditional art forms. With expertise in tools like Procreate, Adobe Illustrator, Photoshop, and Krita, Quadri creates captivating artworks that bridge the gap between classical techniques and modern technology. Explore his portfolio to discover stunning illustrations, paintings, and designs crafted with precision and creativity.",
+  keywords: [
+    "Quadri Aden",
+    "QuadriAden",
+    "Quadri Adeniyi",
+    "QuadriAdeniyi",
+    "Quadri Orekoya",
+    "Digital Artist Nigeria",
+    "Traditional Artist Nigeria",
+    "Nigerian Freelance Artist",
+    "Procreate Artist",
+    "Photoshop Digital Artist",
+    "Krita Illustrator",
+    "Concept Art Nigeria",
+    "Portrait Artist Nigeria",
+    "Art for Sale in Nigeria",
+    "Realism Artist",
+    "Freelance Illustrator",
+    "Quadri Aden Art Portfolio"
+  ],
   openGraph: {
     type: "website",
     title: "Quadri Aden: Digital and Traditional Artist",
     description: "Explore the captivating portfolio of Quadri Aden, a talented Nigerian artist specializing in both digital and traditional art.",
-    url: "https://quadri-ady.vercel.app",
+    url: process.env.NEXT_PUBLIC_SITE_DOMAIN,
     images: ["https://utfs.io/f/7zNmq8UK96IeG1QiUAfv5IkLEqxRAsO0WCdVQug1obSiYvBG"]
   },
   twitter: {

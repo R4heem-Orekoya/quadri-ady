@@ -6,7 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import DesignProcess from "@/components/design-process"
 import { sanityFetch } from "@/lib/sanity/live"
-import { individualProjectSlug, projectQuery } from "@/lib/sanity/queries"
+import { projectQuery } from "@/lib/sanity/queries"
 import { notFound } from "next/navigation"
 import { Project, DesignProcesses } from "../../../../sanity.types"
 import { resolveOpenGraphImage, urlForImage } from "@/lib/sanity/utils"
@@ -17,17 +17,17 @@ interface Props {
    params: Promise<{ slug: string }>
 }
 
-export const revalidate = 60
+// export const revalidate = 60
 
-export async function generateStaticParams() {
-   const { data } = await sanityFetch({
-      query: individualProjectSlug,
-      perspective: "published",
-      stega: false
-   });
+// export async function generateStaticParams() {
+//    const { data } = await sanityFetch({
+//       query: individualProjectSlug,
+//       perspective: "published",
+//       stega: false
+//    });
    
-   return data;
-}
+//    return data;
+// }
 
 export async function generateMetadata(props: Props, parent: ResolvingMetadata): Promise<Metadata> {
    const params = await props.params;
@@ -53,9 +53,7 @@ export async function generateMetadata(props: Props, parent: ResolvingMetadata):
 }
 
 const Page = async ({ params }: Props) => {
-   const [{ data }] = await Promise.all([
-      sanityFetch({ query: projectQuery, params }),
-   ]);
+   const { data } = await sanityFetch({ query: projectQuery, params })
    const project: Project = data
 
    if (!project?._id) {
